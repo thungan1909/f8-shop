@@ -1,0 +1,39 @@
+:root {
+    --white-color: #FFF;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+*{
+    box-sizing: inherit;
+    list-style: none;
+}
+html {
+  
+    /* font-size: 100%;  mac dinh 16px
+        => Nếu các element khác để font-size: 1rem <=> 16px
+        => Khó cài đặt trong trường hợp muốn gán 12px, ...
+        => Ta quy định font-size của html là 62.5px
+        => Lúc này 1 rem là 10px
+        => Nếu muốn vật 12px thì là 1.2 rem
+    */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;     /* san-serif là chủng font không gạch chân, ở đây là để nếu trong trường hợp font roboto không chạy được thì sẽ chạy trước lên font sans-serif  */
+    box-sizing: border-box;
+
+
+}
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;   /*Tự động căn giữa  */
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    /* Những cái này trong wrap thì sẽ nằm trên 1 hàng ngang */
+    flex-wrap: wrap;
+}

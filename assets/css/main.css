@@ -1,0 +1,38 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__nav-list{
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+}
+.header__nav-item{
+  margin-inline: 8px;
+}
+
+.header__nav-item, 
+.header__nav-item-link{
+      /* display: inline-block: giữ tính chất khối và cho phép các element nằm trên 1 hàng
+        display: list-items: các phần tử nằm ở các hàng khác nhau
+    */
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+.header__nav-item--strong{
+    font-weight: 400;
+}
+
+.header__nav-item--separate {
+ 
+    border-right: 1px solid #fb9086;
+    padding-right: .8rem;
+    margin-right: 0;
+}
