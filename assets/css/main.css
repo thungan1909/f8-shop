@@ -10,9 +10,13 @@
     list-style: none;
     display: inline-block;
     padding-left: 0;
+    margin-top: 4px;
 }
-.header__nav-item{
+
+.header__nav-item {
   margin-inline: 8px;
+  position: relative;
+  min-height: 26px;
 }
 
 .header__nav-item, 
@@ -26,6 +30,27 @@
     text-decoration: none;
     font-weight: 300;
 }
+.header__nav-item, 
+.header__nav-item-link,
+.header__nav-icon-link
+{
+
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.header__nav-item:hover, 
+.header__nav-icon-link:hover,
+.header__nav-item-link:hover{
+    color: rgb(255,2555,255, 0.7);
+    cursor: pointer;
+}
+.header__nav-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+
+}
 .header__nav-item--strong{
     font-weight: 400;
 }
@@ -35,4 +60,146 @@
     border-right: 1px solid #fb9086;
     padding-right: .8rem;
     margin-right: 0;
+}
+.header__nav-icon{
+    font-size: 1.8rem;
+    margin-inline: 4px;
+}
+.header__nav-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+.header__nav-item--has-qr:hover .header__qr{
+        /* Ở đây có nghĩa trong trường hợp hover vào nav-item => header qr sẽ được nhận các css (hay header__qr là con của item) */
+        display: block;
+}
+
+
+
+/* HEADER QR */
+.header__qr {
+    position: absolute;
+    left: 0;
+      /* Cao bằng phần tử chứa nó    top: 100%;  */
+    top: 118%;  
+   
+    width: 186px; 
+    padding: 8px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+    
+
+}
+/* Để khi hover vào nav-item => hiển thị ra qr ta dùng
+.header__nav-item--has-qr:hover .header__qr
+Tuy nhiên, sẽ gặp lỗi khoảng cách từ top đến nav-item và từ nav-item đến header-qr không đều nhau
+Và ta cũng mong muốn sau này nếu tăng kích thước nav-item thì qr cũng sẽ kéo xuống
+=> Bước 1: Sửa header__qr top: 100% thành 118% (1 số lớn hơn phù hợp)
+=> Lúc này qr sẽ được đẩy xuống. 
+Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuống dưới sẽ bị mất đi qr (Do có khoảng cách ở giữa)
+=> Bước 2: Tạo thêm 1 phần tử ở giữa nav-item và qr như là câu nối (.header__qr::before)
+ */
+.header__qr::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 100%;
+    height: 20px;
+    display: none;
+}
+.header__qr-img {
+    width: 100%;
+}
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+.header__qr-download-link:first-child {
+    margin-left: 11px;
+}
+.header__qr-download-link:last-child {
+    margin-right: 11px;
+}
+.header__qr-download-img {
+    height: 15px;
+
+}
+
+
+/* NOTIFY */
+/* Chọn những element có điểm chung: ctrl + D */
+/* Chọn tiếp đến chữ cuối cung shift + alt + mũi tên phải  */
+.header__notify {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 404px;
+    border: solid 1px #D3D3D3;
+    background-color: var(--white-color);
+}
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+.header__notify-header h3{
+    color: #999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+
+}
+.header__notify-list {
+    padding-left: 0;
+}
+.header__notify-item {
+     display: flex;
+
+}
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+.header__notify-item--viewed{
+    background-color: rgb(238, 77, 45, 0.09);
+}
+.header__notify-link {
+
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+
+   
+}
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+.header__notify-info {
+    padding-left: 12px;
+}
+.header__notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+}
+.header__notify-desc {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #756F6E;
+}
+
+.header__notify-footer{
+    text-align: center;
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 4px 16px;
 }

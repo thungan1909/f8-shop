@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div class="app">
@@ -17,15 +22,107 @@
            <div class="grid">
             <nav class="header__navbar">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item header__nav-item--separate">Vào ứng dụng trên F8 Shop</li>
-                    <li class="header__nav-item">Kết nối</li>
+                    <li class="header__nav-item header__nav-item--has-qr header__nav-item--separate">
+                        Vào ứng dụng trên F8 Shop
+                        <div class="header__qr">
+                            <img src="./assets/img/qr_code.png" alt="qr code" class="header__qr-img">
+                            <div class="header__qr-apps">
+                                <a class="header__qr-download-link">
+                                    <img src="./assets/img/appstore.png" alt="appstore" class="header__qr-download-img">
+                                </a>
+                                <a class="header__qr-download-link">
+                                    <img src="./assets/img/googleplay.png" alt="googleplay" class="header__qr-download-img">
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__nav-item">
+                        <span class="header__nav-title--no-pointer">Kết nối</span>
+                        <a href="" class="header__nav-icon-link">
+                            <i class="header__nav-icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="header__nav-icon-link">
+                            <i class="header__nav-icon fa-brands fa-instagram"></i>
+                        </a>
+                        
+                    </li>
                 </ul>
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="" class="header__nav-item-link">Thông báo</a>
+                        <a href="" class="header__nav-item-link">
+                            <i class="header__nav-icon fa-regular fa-bell"></i>
+                            Thông báo
+                        </a>
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Thông báo mới nhận</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a class="header__notify-link">
+                                        <img src="https://cf.shopee.vn/file/vn-50009109-1cf083487d56cdebe56e35545cbd17b9" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-desc">Mô tả của mỹ phẩm Ohui chính hãng</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a class="header__notify-link">
+                                        <img src="https://cf.shopee.vn/file/vn-50009109-1cf083487d56cdebe56e35545cbd17b9" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-desc">Mô tả của mỹ phẩm Ohui chính hãng</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a class="header__notify-link">
+                                        <img src="https://cf.shopee.vn/file/vn-50009109-1cf083487d56cdebe56e35545cbd17b9" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-desc">Mô tả của mỹ phẩm Ohui chính hãng</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a class="header__notify-link">
+                                        <img src="https://cf.shopee.vn/file/vn-50009109-1cf083487d56cdebe56e35545cbd17b9" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-desc">Mô tả của mỹ phẩm Ohui chính hãng</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a class="header__notify-link">
+                                        <img src="https://cf.shopee.vn/file/vn-50009109-1cf083487d56cdebe56e35545cbd17b9" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-desc">Mô tả của mỹ phẩm Ohui chính hãng</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                            </footer>
+                        </div>
                     </li>
                     <li class="header__nav-item">
-                        <a href="" class="header__nav-item-link">Trợ giúp</a>
+                        <a href="" class="header__nav-item-link">
+                            <i class="header__nav-icon fa-regular fa-circle-question"></i>
+                            Trợ giúp
+                        </a>
                     </li>
                     <li class="header__nav-item header__nav-item--strong header__nav-item--separate">Đăng ký
                     </li>
