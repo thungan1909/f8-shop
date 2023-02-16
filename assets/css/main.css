@@ -74,7 +74,9 @@
         display: block;
 }
 
-
+.header__nav-item--has-notify:hover .header__notify{
+    display: block;
+}
 
 /* HEADER QR */
 .header__qr {
@@ -139,10 +141,26 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     width: 404px;
     border: solid 1px #D3D3D3;
     background-color: var(--white-color);
+    cursor: pointer;
+  
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrow ease-in 0.2s;
+    display: none;
+}
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .header__notify-header {
     height: 40px;
     background-color: var(--white-color);
+    user-select: none;
 }
 .header__notify-header h3{
     color: #999;
@@ -184,22 +202,30 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 .header__notify-name {
     display: block;
     font-size: 1.4rem;
-    color: var(--black-color);
+    color: var(--text-color);
     font-weight: 400;
+    line-height: 1.8rem;
 }
 .header__notify-desc {
     display: block;
+    margin-top: 4px;
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: #756F6E;
+
 }
 
 .header__notify-footer{
-    text-align: center;
+   display: flex;
+
 }
 
 .header__notify-footer-btn{
     text-decoration: none;
     color: var(--text-color);
-    padding: 4px 16px;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
