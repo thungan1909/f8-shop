@@ -252,3 +252,146 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     font-size: 1.4rem;
     font-weight: 400;
 }
+
+
+
+
+/* AUTHEN */
+.auth-form {
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+
+    overflow: hidden;     /* Để khi phần tử con vượt quá phần tử cha thì hidden */
+}
+.auth-form__container{
+    padding: 0 32px;
+
+}
+
+
+.auth-form__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+
+.auth-form__switch-btn{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+ 
+
+ 
+.auth-form__form{
+    
+}
+
+
+.auth-form__group{
+    }
+
+
+
+.auth-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0px 12px;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+
+
+.auth-form__asside{
+    margin-top: 18px;
+}
+
+.auth-form__policy{
+   
+}
+   
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    padding-inline: 12px;
+}
+
+
+.auth-form__text-link{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+   
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__controls--back{
+    margin-right: 8px;
+}
+
+
+.auth-form__socials{
+    background-color: #F5F5F5;
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+.auth-form__socials-icon{
+    font-size: 1.8rem;
+}
+.auth-form__socials--facebook{
+    color: var(--white-color);
+    background-color: #3A5A98;
+}
+.auth-form__socials--facebook
+.auth-form__socials-icon {
+    color: var(--white-color);
+}
+.auth-form__socials-label{
+    margin: 0px 36px;
+}
+.auth-form__socials--google{
+    color: #666;
+    background-color: var(--white-color);
+}
+.auth-form__socials--google .auth-form__socials-icon {
+    color: transparent;
+    background: conic-gradient(
+      red 0deg,
+      red 45deg,
+      blue 45deg,
+      blue 135deg,
+      green 135deg,
+      green 225deg,
+      yellow 225deg,
+      yellow 275deg,
+      red 275deg
+    );
+    border-radius: 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  
