@@ -136,15 +136,19 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 /* Chọn tiếp đến chữ cuối cung shift + alt + mũi tên phải  */
 .header__notify {
     position: absolute;
-    top: 100%;
+    top: 118%;
     right: 0;
     width: 404px;
     border: solid 1px #D3D3D3;
     background-color: var(--white-color);
     cursor: pointer;
-  
     transform-origin: calc(100% - 20px) top;
     animation: headerNotifyGrow ease-in 0.2s;
+    /* Vì không phải trình duyệt nào cũng hỗ trợ animation => thêm các tiền tố tương ứng với các trình duyệt */
+    -webkit-animation: headerNotifyGrow ease-in 0.2s;     /* Chrome */
+    -o-animation: headerNotifyGrow ease-in 0.2s; ;
+    -moz-animation: headerNotifyGrow ease-in 0.2s; /* firefox */
+    will-change: opacity, transform;     /* Nói cho trình duyệt biết thuộc tính nào sẽ thay đổi khi animation => tối ưu chuyển động */
     display: none;
 }
 @keyframes headerNotifyGrowth {
@@ -156,6 +160,25 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.header__notify::before {
+    content: "";
+    position: absolute;
+    right: 22px;
+    top: -32px;
+    border-width: 20px 26px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+.header__notify::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    right: 0;
+    top: -16px;
+    height: 20px;
+    display: none;
 }
 .header__notify-header {
     height: 40px;
