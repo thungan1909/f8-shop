@@ -274,6 +274,8 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 12px;
+    margin-top: 10px;
 }
 
 
@@ -300,7 +302,8 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 
 
 .auth-form__group{
-    }
+
+}
 
 
 
@@ -370,7 +373,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     color: var(--white-color);
 }
 .auth-form__socials-label{
-    margin: 0px 36px;
+    margin: 0px 24px;
 }
 .auth-form__socials--google{
     color: #666;
@@ -394,4 +397,24 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     -webkit-background-clip: text;
   }
   
-  
+  /* LOGIN */
+
+  .auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .auth-form__help-link{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #939393;
+  }
+  .auth-form__help--separate{
+    border-right: 1px solid var(--border-color);
+    margin-right: 8px;
+    padding-right: 8px;
+
+  }
+  .auth-form__help-forgot{
+        color: var(--primary-color)
+  }
