@@ -5,6 +5,9 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #DBDBDB;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var (--navbar-height));
 }
 
 *{
@@ -69,7 +72,7 @@ html {
     bottom: 0;
     right: 0;
     left: 0;
-    display: flex;
+    display: none;
     animation: growth linear 0.1s;
 }
 .modal_overlay{
