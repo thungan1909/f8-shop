@@ -466,7 +466,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     position: absolute;
     top: calc(100% + 8px);
     right: 1px;
-    background-color: #FFF;
+    background-color: var(--white-color);
     width: 400px;
     border-radius: 2px;
     box-shadow: 0 1px 3.215rem 0 rgba(0, 0, 0, 0.2);
@@ -518,6 +518,91 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     margin-top: 14px;
     color: var(--text-color);
   }
+
+.header__cart-heading{
+    text-align: left;
+    margin: 8px 0px 8px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400 ;
+}
+  /* Card List item */
+  .header__cart-list-item{
+    padding-left: 0;
+    list-style: none;
+  }
+.header__cart-item {
+    display: flex;
+    align-items: center;
+}
+.header__cart-item:hover{
+    background-color: #F8F8F8;
+}
+.header__cart-item-img  {
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+    border: 1px solid #E8E8E8;
+}
+.header__cart-item-info {
+    width: 100%;
+    margin-right: 12px;
+}
+.header__cart-item-head {
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+  
+}
+.header__cart-item-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0px;
+}
+.header__cart-item-price-wrap{
+
+}
+.header__cart-item-price {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+.header__cart-item-multiply {
+    font-size: 0.9rem;
+    margin: 0 4px;
+    color: #757575;
+}
+.header__cart-item-quantity {
+    font-size: 1.2rem;
+     color: #757575;
+}
+.header__cart-item-body {
+    display: flex;
+    justify-content: space-between;
+}
+.header__cart-item-desc {
+    color: #757575;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.header__cart-item-remove {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.header__cart-item-remove:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.header__cart-view-cart{
+    float: right;
+    margin: 0px 12px 12px 0px;
+}
+.header__cart-view-cart:hover{
+    background-color: #F05D41;
+}
   /* Card layout */
   .header__search-input-wrap{
     flex: 1;
