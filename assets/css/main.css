@@ -36,7 +36,7 @@
     border: solid 1px rgba(0, 0, 0, 0.1);
 }
 .header__nav-user-name{
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
  
@@ -52,8 +52,7 @@
     border-radius: 2px;
     background-color: var(--white-color);
     box-shadow: 0 1px 2px #e0e0e0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+   
     display: none;
 }
 .header__nav-user-menu::before {
@@ -94,13 +93,16 @@
 .header__nav-user-item a:hover{
     background-color: #FAFAFA;
 }
+.header__nav-user-item--seperate{
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
 .header__nav-item, 
 .header__nav-item-link{
       /* display: inline-block: giữ tính chất khối và cho phép các element nằm trên 1 hàng
         display: list-items: các phần tử nằm ở các hàng khác nhau
     */
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -124,7 +126,9 @@
 .header__nav-icon-link{
     color: var(--white-color);
     text-decoration: none;
-
+}
+.header__nav-icon-link:nth-child(2){
+    margin-left: 3px;
 }
 .header__nav-item--strong{
     font-weight: 400;
@@ -215,10 +219,11 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     top: 118%;
     right: 0;
     width: 404px;
-    border: solid 1px #D3D3D3;
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
     background-color: var(--white-color);
     cursor: pointer;
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation: headerNotifyGrow ease-in 0.2s;
     /* Vì không phải trình duyệt nào cũng hỗ trợ animation => thêm các tiền tố tương ứng với các trình duyệt */
     -webkit-animation: headerNotifyGrow ease-in 0.2s;     /* Chrome */
@@ -505,6 +510,10 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
   .header__logo{
     width: 200px;
   }
+  .header__logo-link{
+    text-decoration: none;
+    color: transparent;
+  }
   .header__logo-img{
     width: 150px;
   }
@@ -743,7 +752,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 .header__search-select-option {
     position: absolute;
     right: 0;
-    top: 120%;
+    top: calc(120%);
     width: 130px;
     list-style: none;
     padding-left: 0;
