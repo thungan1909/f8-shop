@@ -8,9 +8,10 @@
 }
 .header__nav-list{
     list-style: none;
-    display: inline-block;
+  
     padding-left: 0;
     margin: 4px 0px 0px 0px;
+    display: flex;
 }
 
 .header__nav-item {
@@ -19,6 +20,80 @@
   min-height: 26px;
 }
 
+.header__nav-user{
+    display: flex;
+    justify-items: center;
+    position: relative;
+}
+
+.header__nav-user:hover .header__nav-user-menu {
+    display: block;
+}
+.header__nav-user-img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+.header__nav-user-name{
+    margin-left: 8px;
+    font-size: 1.4rem;
+    font-weight: 400;
+ 
+}
+.header__nav-user-menu{
+    position: absolute;
+    z-index: 1;
+    padding-left: 0;
+    top: calc(100% + 4px);
+    right: 0;
+    width: 150px;
+    list-style: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px #e0e0e0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: none;
+}
+.header__nav-user-menu::before {
+    content: "";
+    position: absolute;
+    right: 17px;
+    top: -36px;
+    border-width: 20px 21px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+.header__nav-user-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 54%;
+    height: 8px;
+   
+}
+.header__nav-user-item a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    padding: 8px 16px;
+    display: block;
+}
+
+.header__nav-user-item a:first-child{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__nav-user-item a:last-child{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.header__nav-user-item a:hover{
+    background-color: #FAFAFA;
+}
 .header__nav-item, 
 .header__nav-item-link{
       /* display: inline-block: giữ tính chất khối và cho phép các element nằm trên 1 hàng
@@ -136,6 +211,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 /* Chọn tiếp đến chữ cuối cung shift + alt + mũi tên phải  */
 .header__notify {
     position: absolute;
+    z-index: 1;
     top: 118%;
     right: 0;
     width: 404px;
@@ -570,7 +646,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     color: var(--primary-color);
 }
 .header__cart-item-multiply {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0 4px;
     color: #757575;
 }
@@ -586,6 +662,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     color: #757575;
     font-size: 1.2rem;
     font-weight: 300;
+    margin-top: 4px;
 }
 .header__cart-item-remove {
     color: var(--text-color);
