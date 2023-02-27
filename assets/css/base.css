@@ -42,8 +42,19 @@ html {
     display: flex;
     /* Những cái này trong wrap thì sẽ nằm trên 1 hàng ngang */
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
-
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+.grid__column-8{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3333%;
+}
 /* Animation */
 
 @keyframes fadeIn {
