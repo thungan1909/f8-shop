@@ -50,7 +50,7 @@ html {
     padding-right: 12px;
     width: 16.6667%;
 }
-.grid__column-8{
+.grid__column-10{
     padding-left: 12px;
     padding-right: 12px;
     width: 83.3333%;
@@ -137,4 +137,53 @@ html {
     /* filter: brightness(80%); */
     color: #949494;
     background-color: #C3C3C3;
+}
+/* Selection */
+.select-input{
+    min-width: 200px;
+    height: 34px;
+    padding: 0px 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+   
+}
+
+.select-input-label{
+    font-size: 1.4rem;
+}
+.select-input-icon{
+    font-size: 1.4rem;
+    color: rgb(132, 131, 131);
+    
+    position: relative;
+    top: 1px;
+}
+.select-input:hover .select-input-option{
+    display: block;
+}
+.select-input-option{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 14px 16px;
+    list-style: none;
+    display: none;
+}
+.select-input__link{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 7px 0px;
+
+}
+.select-input__link:hover{
+    color: var(--primary-color);
 }
