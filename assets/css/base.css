@@ -27,9 +27,9 @@ html {
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;     /* san-serif là chủng font không gạch chân, ở đây là để nếu trong trường hợp font roboto không chạy được thì sẽ chạy trước lên font sans-serif  */
     box-sizing: border-box;
-
-
 }
+
+/* Responsive */
 .grid{
     width: 1200px;
     max-width: 100%;
