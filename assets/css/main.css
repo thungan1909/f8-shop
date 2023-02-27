@@ -854,6 +854,9 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 .app__container{
     background-color: #F5F5F5;
 }
+.app__content{
+    padding-top: 36px;   
+}
 .category{
     border-radius: 2px;
     background-color: var(--white-color);
@@ -862,6 +865,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     color: var(--text-color);
     font-size: 1.7rem;
     padding: 12px 16px;
+    margin-top: 0;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .category__heading-icon{
@@ -875,9 +879,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     list-style: none;
     margin-left: 9px;
 }
-.category-item{
 
-}
 .category-item--active .category-item-link{
     color: var(--primary-color);
 }
@@ -904,3 +906,5 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     right: -4px;
     color: var(--primary-color);
 }
+
+/* Home sort + filter */
