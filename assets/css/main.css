@@ -977,6 +977,8 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     position: relative;
     background-color: var(--white-color);
     margin-top: 10px;
+    min-height: 325px;
+    padding-bottom: 10px;
 }
 
 .home-product-item__img{
@@ -988,7 +990,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 }
 
 .home-product-item__name{
-    margin: 10px 10px 6px;
+    margin: 10px;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--text-color);
@@ -1033,7 +1035,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 .home-product-item__action{
     display: flex;
     justify-content: space-between;
-    margin: 6px 10px 0px;
+    margin: 10px 10px 10px;
 }
 
 .home-product-item__like{
@@ -1071,7 +1073,7 @@ i.home-product-item__like-icon-fill{
 .home-product-item__origin{
     display: flex;
     justify-content: space-between;
-    margin: 3px 10px 0px;
+    margin: 0px 10px 0px;
     color: #595959;
     font-size: 1.2rem;
     font-weight: 300;
