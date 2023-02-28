@@ -971,6 +971,9 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 .home-filter__page-btn--disabled .home-filter__page-icon{
     color: #CCC;
 }
+.home-product{
+    margin-bottom: 10px;
+}
 /* Product item */
 
 .home-product-item{
@@ -979,8 +982,18 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     margin-top: 10px;
     min-height: 325px;
     padding-bottom: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0.1rem 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
+    text-decoration: none;
+    display: block;
 }
-
+.home-product-item:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 0.1rem 20px 0 rgba(0, 0, 0, 0.05);
+}
 .home-product-item__img{
       /* Khi sử dụng background image, sử dụng padding top = 100% để Chiều ngang bằng chiều ngang của thẻ chứa nó */
     padding-top: 100%;
