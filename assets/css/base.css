@@ -30,10 +30,15 @@ html {
 }
 
 /* Responsive */
-.grid{
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;   /*Tự động căn giữa  */
+
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .grid__full-width{
     width: 100%;
