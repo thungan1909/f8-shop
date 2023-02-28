@@ -1109,13 +1109,39 @@ i.home-product-item__like-icon-fill{
     color: var(--white-color);
 }
 .home-product-item__sale-off{
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    color:  rgb(255,216,64, 0.94);
+    background-color: currentColor;
+}
+.home-product-item__sale-off::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-width: 0 20px 4px;
+    border-style: solid;
+    border-color: transparent currentColor transparent currentColor
 }
 
 .home-product-item__sale-off-percent{
-
+    color: #EE4D2D;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    position: relative;
+    top: 4px;
 }
 
 .home-product-item__sale-off-label{
-
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    position: relative;
+    top: 9px;
 }
