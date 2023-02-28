@@ -45,7 +45,7 @@
     position: absolute;
     z-index: 1;
     padding-left: 0;
-    top: calc(100% + 4px);
+    top: calc(100% + 6px);
     right: 0;
     width: 150px;
     list-style: none;
@@ -170,7 +170,8 @@
     background-color: var(--white-color);
     display: none;
     animation: fadeIn ease-in 0.3s;
-    
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
 }
 /* Để khi hover vào nav-item => hiển thị ra qr ta dùng
@@ -558,6 +559,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     display: none;
     animation: fadeIn ease-in 0.2s;
     cursor: default;
+    z-index: 1;
   }
   .header__cart-list::after {
     content: "";
@@ -615,6 +617,8 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
   .header__cart-list-item{
     padding-left: 0;
     list-style: none;
+    max-height: 56vh;
+    overflow-y: auto;
   }
 .header__cart-item {
     display: flex;
@@ -645,6 +649,10 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     font-weight: 500;
     color: var(--text-color);
     margin: 0px;
+    max-width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .header__cart-item-price-wrap{
 
@@ -759,6 +767,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     box-shadow: 0 1px 2px #e0e0e0;
     animation: fadeIn ease-in 0.2s;
     display: none;
+    z-index: 1;
 
 }
 .header__search-select-option::after {
@@ -817,6 +826,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     border-radius: 2px;
     box-shadow: 0 0 5px rgb(189, 189, 189);
     display: none;
+    z-index: 1;
 }
 .header__search-history-heading{
     margin: 6px 12px;
@@ -863,10 +873,13 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 }
 .category__heading{
     color: var(--text-color);
-    font-size: 1.7rem;
-    padding: 12px 16px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* padding: 12px 16px; */
+    padding: 16px 16px 0px;
     margin-top: 0;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    /* border: 1px solid rgba(0, 0, 0, 0.05); */
 }
 .category__heading-icon{
     font-size: 1.4rem;
@@ -879,7 +892,20 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     list-style: none;
     margin-left: 9px;
 }
-
+.category-item{
+    position: relative;
+}
+.category-item:first-child::before{
+    display: none;
+}
+.category-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    border-top: 1px solid #e1e1e1;
+}
 .category-item--active .category-item-link{
     color: var(--primary-color);
 }
@@ -894,10 +920,10 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 }
 .category-item-link{
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     text-decoration: none;
-    padding: 4px 16px;
+    padding: 8px 20px;
     display: block;
     transition: right linear 0.1s;
     right: 0px;
@@ -982,8 +1008,8 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     margin-top: 10px;
     min-height: 325px;
     padding-bottom: 10px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-radius: 2px;
+  
     box-shadow: 0 0.1rem 2px 0 rgba(0, 0, 0, 0.1);
     transition: transform linear 0.1s;
     will-change: transform;
@@ -999,7 +1025,9 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
     padding-top: 100%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: top center;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
 }
 
 .home-product-item__name{
@@ -1132,6 +1160,7 @@ i.home-product-item__like-icon-fill{
     text-align: center;
     color:  rgb(255,216,64, 0.94);
     background-color: currentColor;
+    border-top-right-radius: 2px;
 }
 .home-product-item__sale-off::after{
     content: "";
