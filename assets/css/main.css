@@ -974,6 +974,7 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 /* Product item */
 
 .home-product-item{
+    position: relative;
     background-color: var(--white-color);
     margin-top: 10px;
 }
@@ -1076,18 +1077,37 @@ i.home-product-item__like-icon-fill{
     font-weight: 300;
 }
 
-.home-product-item__brand{
-
-}
-
-.home-product-item__origin-name{
-
-}
 
 .home-product-item__favourite{
-
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    background-color: currentColor;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    padding: 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
-
+.home-product-item__favourite::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+}
+.home-product-item__favourite i {
+    font-size: 0.9rem;
+    margin: 0px 2px 0px 5px;
+    color: var(--white-color);
+}
+.home-product-item__favourite span{
+    color: var(--white-color);
+}
 .home-product-item__sale-off{
 
 }
