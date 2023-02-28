@@ -971,3 +971,131 @@ Tuy nhiên nó bị đẩy xuống xa quá => sau khi hover xong lúc kéo xuố
 .home-filter__page-btn--disabled .home-filter__page-icon{
     color: #CCC;
 }
+/* Product item */
+
+.home-product-item{
+    background-color: var(--white-color);
+    margin-top: 10px;
+}
+
+.home-product-item__img{
+      /* Khi sử dụng background image, sử dụng padding top = 100% để Chiều ngang bằng chiều ngang của thẻ chứa nó */
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.home-product-item__name{
+    margin: 10px 10px 6px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+ /* Đoạn dưới đây giúp hiển thị tên sp chỉ giới hạn trong 2 hàng, nếu nhiều hơn thì cắt và đổi thành dấu ...*/
+    height: 3.6rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    
+    /*Trong trường hợp 1dòng thì có thể dùng
+    height: 1.8rem 
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
+.home-product-item__price{
+    display: flex;
+   
+    align-items: baseline;
+    flex-wrap: wrap;
+
+}
+
+.home-product-item__price-old{
+    font-size: 1.4rem;
+    color: #666;
+    text-decoration: line-through;
+    padding-left: 10px;
+   
+}
+
+.home-product-item__price-current{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.home-product-item__action{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 10px 0px;
+}
+
+.home-product-item__like{
+    font-size: 1.3rem;
+}
+.home-product-item__like-icon-empty{
+    color: #ff424f;
+}
+.home-product-item__like--liked .home-product-item__like-icon-empty{
+    display: none;
+}
+.home-product-item__like--liked .home-product-item__like-icon-fill{
+    display: inline-block;
+}
+i.home-product-item__like-icon-fill{
+    color: #ff424f;
+    display: none;
+}
+.home-product-item__rating{
+    font-size: 1rem;
+    /* Vì font nhỏ quá nó không thu nhỏ nữa nên là dùng thuộc tính tranform: scale(0.8) để thu nhỏ */
+    transform: scale(0.8);
+    transform-origin: right;
+    color: #D5D5D5;
+    margin: -1px 0 0 auto;
+}
+.home-product-item__star--gold {
+    color: #ee4d2d;
+}
+.home-product-item__sold{
+    font-size: 1.2rem;
+    color: #757575;
+    margin-left: 6px;
+}
+.home-product-item__origin{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 10px 0px;
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.home-product-item__brand{
+
+}
+
+.home-product-item__origin-name{
+
+}
+
+.home-product-item__favourite{
+
+}
+
+.home-product-item__sale-off{
+
+}
+
+.home-product-item__sale-off-percent{
+
+}
+
+.home-product-item__sale-off-label{
+
+}
